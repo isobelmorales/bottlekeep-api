@@ -27,10 +27,7 @@ const bottleSchema = new mongoose.Schema(
 			type: Number,
 			required: true,
 		},
-        image: {
-            type: String,
-            required: true
-        },
+        image: String,
         sharing: Boolean,
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
