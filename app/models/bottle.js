@@ -2,7 +2,6 @@
 
 const mongoose = require('mongoose')
 const User = require('./user')
-const commentSchema = require('./comment')
 
 //// CREATE BOTTLE SCHEMA ////
 
@@ -35,10 +34,8 @@ const bottleSchema = new mongoose.Schema(
         sharing: Boolean,
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
-			ref: 'User',
-			required: true,
-		},
-        comments: [commentSchema]
+			ref: 'User'
+		}
 	},
 	{
 		timestamps: true,
